@@ -1,11 +1,15 @@
-<h2 *ngIf="products">{{title}}</h2>
+<h2 *ngIf="products; else noProduct">{{title}}</h2>
+<ng-template #noProduct>
+    <div class="alert alert-danger" role="alert">    Don't have product this category</div>
+</ng-template>
 <div class="row">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
+    <div *ngFor="let product of products" class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <h5 class="card-text">{{product.price}}</h5>
+          <a href="#" class="btn btn-primary">Add to Cart</a>
         </div>
       </div>
 </div>
