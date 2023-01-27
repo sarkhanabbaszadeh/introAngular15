@@ -9,6 +9,7 @@ import { Product } from './product';
 export class ProductComponent {
 name="Laptop Product"
 title="Product List"
+filterText=""
 //products="" // Don't have product this category
 products:Product[]=[
   {id:1,name:"Asus Laptop",price:2500,categoryId:1,description:"This Laptop is Perfect !",imageUrl:"https://images.unsplash.com/photo-1630794180018-433d915c34ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"},
