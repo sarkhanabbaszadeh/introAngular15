@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './product';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-product',
